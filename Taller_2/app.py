@@ -28,9 +28,10 @@ def load_data():
     df["time"]=pd.to_datetime(df["time"])
 
     #Establecer índice
-    df=df.set_index("time")
+    # se cambia la variable df a df_index
+    df_index=df.set_index("time")
 
-    return df 
+    return df_index
     
 # Cargar datos
 data = load_data()
